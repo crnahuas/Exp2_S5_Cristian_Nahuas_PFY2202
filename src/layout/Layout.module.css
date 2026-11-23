@@ -1,0 +1,142 @@
+.header {
+  position: relative;
+  z-index: 20;
+  background: var(--white);
+  border-top: 5px solid var(--accent);
+  border-bottom: 1px solid var(--line);
+}
+.headerInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  min-height: 86px;
+}
+.brand {
+  color: var(--ink);
+}
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin-left: auto;
+}
+.navigation a {
+  display: block;
+  padding: 14px 0;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  border-bottom: 2px solid transparent;
+}
+.navigation a:hover,
+.navigation a[aria-current="page"] {
+  color: var(--primary);
+  border-bottom-color: var(--primary);
+}
+.headerCta {
+  margin-left: 20px;
+}
+.menuButton {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  min-width: 44px;
+  padding: 10px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  color: var(--primary);
+}
+.footer {
+  margin-top: auto;
+  padding-top: 40px;
+  background: var(--navy);
+  color: var(--white);
+}
+.footerInner {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+  padding-bottom: 32px;
+}
+.footerInner > div > p {
+  margin: 15px 0 0;
+  font-size: 0.9375rem;
+  color: var(--on-dark);
+}
+.footerInner nav {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 0.875rem;
+}
+.footerInner a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.footerNote {
+  margin: 0;
+  color: var(--on-dark);
+  font-size: 0.875rem;
+  line-height: 1.75;
+}
+.footerBottom {
+  padding-block: 20px;
+  border-top: 1px solid var(--primary);
+  color: var(--on-dark);
+  font-size: 0.8125rem;
+}
+@media (max-width: 1000px) {
+  .header .headerCta {
+    display: none;
+  }
+  .headerInner {
+    min-height: 78px;
+  }
+  .navigation {
+    gap: 24px;
+  }
+  .footerInner {
+    gap: 28px;
+  }
+}
+@media (max-width: 700px) {
+  .headerInner {
+    min-height: 74px;
+  }
+  .menuButton {
+    display: flex;
+    margin-left: auto;
+  }
+  .navigation {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--white);
+    padding: 12px 18px 20px;
+    border-bottom: 1px solid var(--line);
+  }
+  .navigation.open {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2px;
+  }
+  .navigation a {
+    padding: 15px 8px;
+  }
+  .footerInner {
+    grid-template-columns: 1fr 1fr;
+    gap: 28px 20px;
+  }
+  .footerNote {
+    grid-column: 1/-1;
+  }
+  .footerInner > div > p {
+    font-size: 0.875rem;
+  }
+}

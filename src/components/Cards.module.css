@@ -1,0 +1,81 @@
+.destination {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  border-bottom: 2px solid var(--line);
+}
+.imageLink {
+  display: block;
+  height: 235px;
+  overflow: hidden;
+  border-radius: 4px;
+}
+.imageLink :global(.travel-image) {
+  height: 100%;
+}
+.imageLink:hover {
+  outline: 2px solid var(--primary);
+  outline-offset: 3px;
+}
+.destinationCopy {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 21px 0 0;
+}
+.location {
+  margin-bottom: 9px;
+  font-size: 0.875rem;
+  color: var(--primary);
+  font-weight: 500;
+}
+.destination h3 {
+  font-size: 1.5rem;
+  line-height: 1.2;
+  margin-bottom: 13px;
+}
+.destination h3 a:hover {
+  color: var(--primary);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.activities {
+  font-size: 1rem;
+  color: var(--muted);
+  line-height: 1.65;
+  margin: 0 0 20px;
+}
+.cardFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: auto;
+  padding: 0 0 16px;
+  font-size: 0.875rem;
+}
+.cardFooter > span {
+  color: var(--muted);
+}
+.cardFooter > a {
+  font-size: 0.875rem;
+}
+@media (max-width: 1000px) {
+  .imageLink {
+    height: 220px;
+  }
+  .destination h3 {
+    font-size: 1.4rem;
+  }
+}
+@media (max-width: 600px) {
+  .imageLink {
+    height: 245px;
+  }
+  .destination h3 {
+    font-size: 1.55rem;
+  }
+  .activities {
+    font-size: 1rem;
+  }
+}
