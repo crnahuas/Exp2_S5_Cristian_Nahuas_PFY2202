@@ -243,14 +243,14 @@ test("funciona bajo el subdirectorio de GitHub Pages", async ({ page }) => {
       paths.push(url.pathname);
   });
   await page.goto(
-    "http://127.0.0.1:4177/viajes-cristian-nahuas-pfy2202/#/destinos/cusco",
+    "http://127.0.0.1:4177/Exp2_S5_Cristian_Nahuas_PFY2202/#/destinos/cusco",
   );
   await expect(
     page.getByRole("heading", { name: "Patio del Sol" }),
   ).toBeVisible();
   expect(paths.length).toBe(3);
   expect(
-    paths.every((path) => path.startsWith("/viajes-cristian-nahuas-pfy2202/")),
+    paths.every((path) => path.startsWith("/Exp2_S5_Cristian_Nahuas_PFY2202/")),
   ).toBe(true);
   await page.reload();
   await expect(

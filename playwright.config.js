@@ -46,8 +46,8 @@ export default defineConfig({
     },
     {
       command:
-        "npm run preview -- --port 4177 --base /viajes-cristian-nahuas-pfy2202/ --strictPort",
-      url: "http://127.0.0.1:4177/viajes-cristian-nahuas-pfy2202/",
+        "npm run preview -- --port 4177 --base /Exp2_S5_Cristian_Nahuas_PFY2202/ --strictPort",
+      url: "http://127.0.0.1:4177/Exp2_S5_Cristian_Nahuas_PFY2202/",
       reuseExistingServer: !process.env.CI,
     },
   ],
